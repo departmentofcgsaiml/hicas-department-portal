@@ -62,13 +62,24 @@ export default function HeroSlider() {
         ))}
       </div>
 
-      {/* Improved Text Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-center justify-center">
-        <h1 className="text-4xl md:text-6xl font-extrabold font-lora tracking-tight text-white text-center p-4"
-            style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)' }}>
-          Department of AIMl & CGS
+      {/* FIXED: Vertical Side Buttons - Now hidden on mobile (hidden) and shown on desktop (md:flex) */}
+      <div className="hidden md:flex fixed top-1/2 right-0 transform -translate-y-1/2 z-50 flex-col space-y-1">
+        <a href="https://earth.google.com/..." className="bg-amber-500 hover:bg-amber-600 text-white font-bold p-3 rounded-l-md shadow-lg transition-transform hover:translate-x-[-4px]">
+          <span style={{ writingMode: 'vertical-rl' }} className="transform rotate-180 tracking-widest text-sm">CAMPUS TOUR</span>
+        </a>
+        <a href="https://apply.hindusthan.net/..." className="bg-blue-600 hover:bg-blue-700 text-white font-bold p-3 rounded-l-md shadow-lg transition-transform hover:translate-x-[-4px]">
+          <span style={{ writingMode: 'vertical-rl' }} className="transform rotate-180 tracking-widest text-sm">ADMISSION 2026</span>
+        </a>
+      </div>
+
+      {/* IMPROVED: Responsive Text Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-center justify-center">
+        <h1 className="text-2xl sm:text-4xl md:text-6xl font-extrabold font-lora tracking-tight text-white text-center px-6 py-4 leading-tight"
+            style={{ textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8)' }}>
+          Department of AIML & CGS
         </h1>
       </div>
+      
       
       {/* Manual Navigation Buttons */}
       <button
