@@ -92,7 +92,7 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Vertical Side Buttons */}
+      {/* Vertical Side Buttons
       <div className="fixed top-1/2 right-0 transform -translate-y-1/2 z-50 flex flex-col space-y-1">
         <a href="https://earth.google.com/web/search/Hindusthan+College+of+Arts+and+Science,+Avinashi+Road,+behind+Nava+India,+Udayampalayam,+Tamil+Nadu/@11.01257474,76.99322694,424.90483139a,826.56047547d,35y,359.99847219h,0t,0r/data=CtMBGqQBEp0BCiQweDNhNTI2NWQwZjBlMjAyZGQ6MHg2YzFjYjI0OTMxOGM3N2YZOrB32nUGJkAhpJTGHpA_U0AqY0hpbmR1c3RoYW4gQ29sbGVnZSBvZiBBcnRzIGFuZCBTY2llbmNlLCBBdmluYXNoaSBSb2FkLCBiZWhpbmQgTmF2YSBJbmRpYSwgVWRheWFtcGFsYXlhbSwgVGFtaWwgTmFkdRgBIAEiJgokCeXGw6pmByZAESjzSibaBCZAGTZu-8XzP1NAIddBj_NHP1NAQgIIAToDCgEwQgIIAEoNCP___________wEQAA" className="bg-amber-500 hover:bg-amber-600 text-white font-bold p-3 rounded-l-md shadow-lg transition-transform hover:translate-x-[-4px]">
           <span style={{ writingMode: 'vertical-rl' }} className="transform rotate-180 tracking-widest text-sm">CAMPUS TOUR</span>
@@ -100,7 +100,7 @@ export default function Header() {
         <a href="https://apply.hindusthan.net/arts-and-science" className="bg-blue-600 hover:bg-blue-700 text-white font-bold p-3 rounded-l-md shadow-lg transition-transform hover:translate-x-[-4px]">
           <span style={{ writingMode: 'vertical-rl' }} className="transform rotate-180 tracking-widest text-sm">ADMISSION 2026</span>
         </a>
-      </div>
+      </div> */}
     </>
   );
 }
