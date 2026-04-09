@@ -108,14 +108,34 @@ const StatCard = ({ icon: Icon, value, label, colorClass }) => (
 
 export default function App() {
   const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+    // hidden: { opacity: 0 },
+    // visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+    hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring', // TypeScript now knows this is a valid motion type
+      stiffness: 100,
+    },
+  },
   };
 
+  // const cardVariants: Variants = {
+  //   hidden: { y: 20, opacity: 0 },
+  //   visible: { y: 0, opacity: 1, transition: { type: 'spring', stiffness: 100 } },
+  // };
   const cardVariants: Variants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { type: 'spring', stiffness: 100 } },
-  };
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring', // TypeScript now knows this is a valid motion type
+      stiffness: 100,
+    },
+  },
+};
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-900 font-sans selection:bg-blue-100 dark:selection:bg-blue-900">
