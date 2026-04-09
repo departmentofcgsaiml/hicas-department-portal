@@ -2,23 +2,48 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { studentAchievements } from '@/lib/achievementsData';
 import ExpandableText from '@/components/ExpandableText';
-import { motion } from 'framer-motion'; // Import the motion component for animations
+import { motion, Variants } from 'framer-motion';
 
 export default function AchievementsPage() {
   
   // Animation variants for the container to orchestrate the stagger effect
-  const containerVariants = {
+  // const containerVariants = {
+  //   hidden: { opacity: 0 },
+  //   visible: {
+  //     opacity: 1,
+  //     transition: {
+  //       staggerChildren: 0.1, // Each child will animate 0.1s after the previous one
+  //     },
+  //   },
+  // };
+
+  // // Animation variants for each individual card
+  // const cardVariants = {
+  //   hidden: { y: 20, opacity: 0 },
+  //   visible: {
+  //     y: 0,
+  //     opacity: 1,
+  //     transition: {
+  //       type: 'spring',
+  //       stiffness: 100,
+  //       damping: 10,
+  //     },
+  //   },
+  // };
+    // Animation variants for the container to orchestrate the stagger effect
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1, // Each child will animate 0.1s after the previous one
+        staggerChildren: 0.1,
       },
     },
   };
 
   // Animation variants for each individual card
-  const cardVariants = {
+  // Explicitly adding : Variants solves the "type: string" error
+  const cardVariants: Variants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
