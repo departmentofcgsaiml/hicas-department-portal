@@ -1,6 +1,21 @@
 
+// import React from 'react';
+// import { motion, Variant } from 'framer-motion';
+// import { 
+//   GraduationCap, 
+//   Briefcase, 
+//   Quote, 
+//   Award, 
+//   Globe, 
+//   Users, 
+//   Target, 
+//   Linkedin,
+//   MapPin,
+//   Calendar
+// } from 'lucide-react';
+
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion'; // Added Variants here
 import { 
   GraduationCap, 
   Briefcase, 
@@ -8,7 +23,6 @@ import {
   Award, 
   Globe, 
   Users, 
-  Target, 
   Linkedin,
   MapPin,
   Calendar
@@ -65,8 +79,23 @@ const alumniData = [
     linkedin: "https://www.linkedin.com"
   }
 ];
+interface StatCardProps {
+  icon: React.ElementType;
+  value: string | number;
+  label: string;
+  color: string;
+}
 
-const StatCard = ({ icon: Icon, value, label, color }) => (
+// const StatCard = ({ icon: Icon, value, label, color }) => (
+//   <div className="bg-white dark:bg-slate-800 p-8 rounded-[2rem] shadow-xl text-center border border-slate-100 dark:border-slate-700 transition-transform hover:-translate-y-2">
+//     <div className={`w-14 h-14 mx-auto mb-4 rounded-2xl flex items-center justify-center bg-slate-50 dark:bg-slate-900 ${color}`}>
+//       <Icon className="w-8 h-8" />
+//     </div>
+//     <p className="text-4xl font-black text-slate-900 dark:text-white mb-1">{value}</p>
+//     <p className="text-xs font-bold text-slate-400 uppercase tracking-[0.2em]">{label}</p>
+//   </div>
+// );
+const StatCard = ({ icon: Icon, value, label, color }: StatCardProps) => (
   <div className="bg-white dark:bg-slate-800 p-8 rounded-[2rem] shadow-xl text-center border border-slate-100 dark:border-slate-700 transition-transform hover:-translate-y-2">
     <div className={`w-14 h-14 mx-auto mb-4 rounded-2xl flex items-center justify-center bg-slate-50 dark:bg-slate-900 ${color}`}>
       <Icon className="w-8 h-8" />
@@ -77,12 +106,21 @@ const StatCard = ({ icon: Icon, value, label, color }) => (
 );
 
 export default function App() {
-  const containerVariants = {
+  // const containerVariants = {
+  //   hidden: { opacity: 0 },
+  //   visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+  // };
+
+  // const cardVariants = {
+  //   hidden: { y: 30, opacity: 0 },
+  //   visible: { y: 0, opacity: 1, transition: { type: 'spring', stiffness: 100 } },
+  // };
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
   };
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { y: 30, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { type: 'spring', stiffness: 100 } },
   };
